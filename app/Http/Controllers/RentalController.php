@@ -28,7 +28,7 @@ class RentalController extends Controller
         $rentalString = explode(',', $rentalString); // Initial query string to an array
         $rentalArray = array_chunk($rentalString, 2); // The input is filmname,duration split the array in chunks
 
-        if(!isset($rentalArray[0]) || !isset($rentalArray[1])) {
+        if(!isset($rentalString[0]) || !isset($rentalString[1])) {
             return response('You must parse a string in the URL called rentals with a film name and duration. E.g rentals?matrix,3,dumbo,4', 400);
         }
 
