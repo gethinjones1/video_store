@@ -49,6 +49,12 @@ class Receipt {
           $points = 1;
         }
 
+        if ($type == "N/A") {
+          $film = $film." -> FILM NOT FOUND";
+          $price = 0;
+          $points = 0;
+        }
+
         return array("price"=>$price, "points"=>$points, "filmName"=>$film, "duration"=>$duration);
 
     }
