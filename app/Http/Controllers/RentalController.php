@@ -22,7 +22,7 @@ class RentalController extends Controller
         if($request->has('rentals')) {
             $rentalString = $request->input('rentals');
         } else {
-            return '500'; //send http status
+            return response('You must parse a string in the URL called rentals with a film name and duration. E.g rentals?matrix,3,dumbo,4', 400);
         }
 
         $rentalString = explode(',', $rentalString); // Initial query string to an array

@@ -21,8 +21,9 @@ class Receipt {
             $totalPoints = $totalPoints + $statementLine['points'];
         }
 
+        $customer = array('customerName:'=>'Example Customer');
+        array_unshift($rentalResult, $customer);
         $total = array("totalPrice"=>$totalPrice, "totalPoints"=>$totalPoints);
-
         array_push($rentalResult, $total);
         
         return $rentalResult;
