@@ -56,7 +56,6 @@ class Receipt {
         }
 
         return array("price"=>$price, "points"=>$points, "filmName"=>$film, "duration"=>$duration);
-
     }
 }
 

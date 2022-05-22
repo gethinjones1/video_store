@@ -38,7 +38,7 @@ class RentalController extends Controller
             try {
                 $movie = Rentals::where('movie_name', $rental[0])->get('movie_type');
                 $movie_type = $movie[0]['movie_type'];
-            } catch(Exception $e) {
+            } catch(Exception) {
                 $movie_type = "N/A";
             }
 
