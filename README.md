@@ -1,5 +1,15 @@
 # Video Store
 
+Valid film name inputs: 
+
+matrix, dumbo, bond, et, FF10.
+
+API GET request to laravel local server. Parse a string in the url in the following format: 
+
+http://127.0.0.1:8000/api/rentals?rentals=matrix,3,dumbo,2,bond,3,et,5,FF10,1
+
+WHERE rentals=FILNAME,DURATION,FILMNAME,DURATION etc.
+
 Write a system that can build a `statement`, when given `rentals`.
 
 When there are 3 regular movie rentals for 1, 2 and 3 days respectively, the statement looks like:
