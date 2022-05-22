@@ -10,14 +10,21 @@ class Receipt {
         $totalPoints = 0;
 
         foreach($rentalArray as $rental) {
-            $film = $rental[0]; //film.name AND film.type 
+            $film = $rental[0]; 
             $duration = $rental[1];
             $type = $rental[2];
+
             $statementLine = $this->lineItem($film, $duration, $type);
+
             array_push($rentalResult, $statementLine);
-            //Increment price and points
+            $totalPrice = $totalPrice + $statementLine['price'];
+            $totalPoints = $totalPoints + $statementLine['points'];
         }
-        //Calculate total price
+
+        $total = array("totalPrice"=>$totalPrice, "totalPoints"=>$totalPoints);
+
+        array_push($rentalResult, $total);
+        
         return $rentalResult;
     }
 
