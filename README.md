@@ -1,5 +1,7 @@
 # Video Store
 
+## User Instructions
+
 Valid film name inputs: 
 
 `matrix`, `dumbo`, `bond`, `et`, `FF10`.
@@ -9,6 +11,8 @@ API GET request to laravel local server. Parse a string in the url in the follow
 http://127.0.0.1:8000/api/rentals?rentals=matrix,3,dumbo,2,bond,3,et,5,FF10,1
 
 WHERE rentals=FILNAME,DURATION,FILMNAME,DURATION etc.
+
+## System Brief
 
 Write a system that can build a `statement`, when given `rentals`.
 
