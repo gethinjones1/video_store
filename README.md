@@ -2,7 +2,7 @@
 
 Valid film name inputs: 
 
-matrix, dumbo, bond, et, FF10.
+`matrix`, `dumbo`, `bond`, `et`, `FF10`.
 
 API GET request to laravel local server. Parse a string in the url in the following format: 
 
